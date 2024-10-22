@@ -1,0 +1,177 @@
+@import url("../Assets/global.css");
+
+.new-collections {
+    margin: 50px;
+    text-align: center;
+    color: #E0E0E0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.new-collections h1 {
+    color: hsla(0, 0%, 0%, .9);
+    font: normal Varela Round, sans-serif;
+    font-size: clamp(12px, 5vw, 100px);
+    left: 0;
+    letter-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    animation: move linear 2000ms infinite;
+}
+
+@keyframes move {
+    0% {
+        text-shadow:
+            4px -4px 0 rgb(132, 0, 255, 1),
+            3px -3px 0 rgb(132, 0, 255, 1),
+            2px -2px 0 rgb(132, 0, 255, 1),
+            1px -1px 0 rgb(132, 0, 255, 1),
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1);
+    }
+
+    25% {
+        text-shadow:
+            -4px -4px 0 hsla(180, 100%, 50%, 1),
+            -3px -3px 0 hsla(180, 100%, 50%, 1),
+            -2px -2px 0 hsla(180, 100%, 50%, 1),
+            -1px -1px 0 hsla(180, 100%, 50%, 1),
+            4px 4px 0 rgb(132, 0, 255, 1),
+            3px 3px 0 rgb(132, 0, 255, 1),
+            2px 2px 0 rgb(132, 0, 255, 1),
+            1px 1px 0 rgb(132, 0, 255, 1),
+    }
+
+    50% {
+        text-shadow:
+            -4px 4px 0 rgb(132, 0, 255, 1),
+            -3px 3px 0 rgb(132, 0, 255, 1),
+            -2px 2px 0 rgb(132, 0, 255, 1),
+            -1px 1px 0 rgb(132, 0, 255, 1),
+            4px -4px 0 hsla(180, 100%, 50%, 1),
+            3px -3px 0 hsla(180, 100%, 50%, 1),
+            2px -2px 0 hsla(180, 100%, 50%, 1),
+            1px -1px 0 hsla(180, 100%, 50%, 1);
+    }
+
+    75% {
+        text-shadow:
+            4px 4px 0 hsla(180, 100%, 50%, 1),
+            3px 3px 0 hsla(180, 100%, 50%, 1),
+            2px 2px 0 hsla(180, 100%, 50%, 1),
+            1px 1px 0 hsla(180, 100%, 50%, 1),
+            -4px -4px 0 rgb(132, 0, 255, 1),
+            -3px -3px 0 rgb(132, 0, 255, 1),
+            -2px -2px 0 rgb(132, 0, 255, 1),
+            -1px -1px 0 rgb(132, 0, 255, 1),
+    }
+
+    100% {
+        text-shadow:
+            4px -4px 0 rgb(132, 0, 255, 1),
+            3px -3px 0 rgb(132, 0, 255, 1),
+            2px -2px 0 rgb(132, 0, 255, 1),
+            1px -1px 0 rgb(132, 0, 255, 1),
+            -4px 4px 0 hsla(180, 100%, 50%, 1),
+            -3px 3px 0 hsla(180, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1),
+            -1px 1px 0 hsla(180, 100%, 50%, 1);
+    }
+}
+
+hr {
+    width: 80%;
+    margin-bottom: 50px;
+}
+
+.collections {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-top: 50px;
+    gap: 30px;
+
+}
+
+.magic-button {
+    background: black;
+    cursor: pointer;
+    border: none;
+    padding: 12px 40px;
+    color: azure;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+.magic-button__link {
+    text-decoration: none;
+}
+
+
+.magic-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+    background-size: 800%;
+    filter: blur(8px);
+    animation: glowing 20s linear infinite;
+}
+
+.magic-button:hover:before {
+    animation: none;
+}
+
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
+
+@media (max-width:900px) {
+    .collections {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        margin-top: 50px;
+        gap: 30px;
+    }
+}
+
+@media (max-width:650px) {
+    .collections {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+        gap: 30px;
+    }
+}
+
+@media (max-width:480px) {
+    .collections {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 50px;
+        gap: 10px;
+    }
+}

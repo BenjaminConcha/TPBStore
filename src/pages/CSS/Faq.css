@@ -1,0 +1,73 @@
+@import url("../../components/Assets/global.css");
+
+.faq {
+    display: flex;
+    color: #e0e0e0;
+    flex-direction: column;
+    margin-top: 2rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+.faq__container {
+
+    margin: auto;
+    width: clamp(300px, 80%, 1200px);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 26px;
+    margin-bottom: 5rem;
+}
+
+.faq__item {
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+}
+
+.faq__question {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    font-weight: bold;
+    align-items: center;
+}
+
+.faq__question span {
+    transition: transform .5s ease;
+
+}
+
+.faq__question span.rotate {
+    transform: rotate(180deg);
+}
+
+.faq__answer {
+    margin-top: 1rem;
+    font-size: 20px;
+    animation: aparecer 1s both;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        translate: 0 -20px;
+
+    }
+
+    50% {}
+
+    to {
+        opacity: 1;
+        translate: 0 0;
+
+    }
+}
+
+@media (max-width:768px) {
+    .faq {
+        scale: .9;
+    }
+}

@@ -1,0 +1,73 @@
+@import url("../Assets/global.css");
+
+.sales-and-payments-container {
+    margin-top: 100px;
+    width: clamp(300px, 80%, 1600px);
+    color: #e0e0e0;
+    border-radius: 5px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    height: 300px;
+}
+
+.sales-and-payments-container__img {
+    background-image: url("../Assets/fondo_orange.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    position: absolute;
+    z-index: -1;
+    border-radius: 5px;
+}
+
+.sales-and-payments__sales {
+    background-color: rgba(10, 10, 10, 0.308);
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+    gap: 30px;
+}
+
+.sales-and-payments__sales p {
+    font-size: clamp(14px, 3vw, 50px);
+    transform: scale(1.3);
+    font-weight: 900;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+
+}
+
+.sales-and-payments__payments {
+    background-color: rgba(10, 10, 10, 0.308);
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+
+
+}
+
+.sales-and-payments__payments img {
+    width: clamp(50px, 20%, 250px);
+}
+
+@media (max-width:650px) {
+    .sales-and-payments__sales {
+        flex-direction: column;
+        height: 300px;
+    }
+
+    .sales-and-payments__payments {
+        display: none;
+    }
+}

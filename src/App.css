@@ -1,0 +1,32 @@
+:root {
+    background-color: #121212;
+    overflow-x: hidden;
+}
+
+hr {
+    width: clamp(300px, 80%, 1200px);
+}
+
+/* Fondo de la barra de scroll */
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* Fondo de la pista de la barra de scroll */
+::-webkit-scrollbar-track {
+    background: #121212;
+    border-radius: 6px;
+}
+
+/* Fondo del pulgar de la barra de scroll */
+::-webkit-scrollbar-thumb {
+    background-color: #053f41;
+    border-radius: 6px;
+    border: 3px solid #121212;
+    /
+}
+
+/* Fondo del pulgar al pasar el ratón por encima */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #046468;
+}
